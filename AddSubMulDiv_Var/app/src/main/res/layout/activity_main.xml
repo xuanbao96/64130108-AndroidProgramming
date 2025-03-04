@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#66BB6A"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHÉP TÍNH SỐ HỌC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a="
+            android:textColor="#673AB7"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edtSo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mời nhập một con số ở đây" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b="
+            android:textColor="#673AB7"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edtSo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mời nhập một con số ở đây"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCong"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#FFF"/>
+
+        <Button
+            android:id="@+id/btnTru"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#FFF"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnNhan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="*"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#FFF"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnChia"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="/"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#FFF"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kết quả là: "
+            android:textColor="#673AB7"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edtKetQua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Nơi hiện kết quả"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
