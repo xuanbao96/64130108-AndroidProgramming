@@ -29,5 +29,11 @@
             android:text="TÊN ĐĂNG NHẬP HIỆN RA Ở ĐÂY"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="157dp"
+        android:background="#673AB7"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        />
 </LinearLayout>
