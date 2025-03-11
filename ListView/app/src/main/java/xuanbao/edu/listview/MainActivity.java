@@ -1,8 +1,11 @@
 package xuanbao.edu.listview;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +32,18 @@ public class MainActivity extends AppCompatActivity {
         dsNgonNguLT = new ArrayList<String>();
         dsNgonNguLT.add("Python");
         dsNgonNguLT.add("PHP");
+
         ArrayAdapter<String> adapterNNLT;
-        adapterNNLT = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,dsNgonNguLT);
+        adapterNNLT = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,dsNgonNguLT);
+
+        listViewNNLT.setAdapter(adapterNNLT);
+
+       listViewNNLT.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               String giaTriDuocChon = dsNgonNguLT.get(position);
+               Toast.makeText(MainActivity.this,giaTriDuocChon,Toast.LENGTH_LONG).show();
+           }
+       });
     }
 }
