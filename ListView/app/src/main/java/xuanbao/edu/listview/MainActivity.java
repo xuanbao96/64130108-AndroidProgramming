@@ -1,6 +1,7 @@
 package xuanbao.edu.listview;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -28,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
         dsNgonNguLT = new ArrayList<String>();
         dsNgonNguLT.add("Python");
         dsNgonNguLT.add("PHP");
+        ArrayAdapter<String> adapterNNLT;
+        adapterNNLT = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,dsNgonNguLT);
     }
 }
