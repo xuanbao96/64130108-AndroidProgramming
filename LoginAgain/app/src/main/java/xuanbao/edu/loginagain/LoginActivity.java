@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(iQuiz);
                 }
                 else {
-                    Toast.makeText(MainActivity.this,"THÔNG TIN ĐÃ NHẬP SAI",Toast.LENGTH_LONG);
+                    Toast.makeText(LoginActivity.this,"THÔNG TIN ĐÃ NHẬP SAI",Toast.LENGTH_LONG).show();
                 }
             }
         });
