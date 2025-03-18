@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = edtName.getText().toString().trim();
                 if(!name.isEmpty()){
-                    Toast.makeText(MainActivity.this,"Chào"+name,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Chào" + name,Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(MainActivity.this,"Vui lòng nhập tên"+name,Toast.LENGTH_SHORT).show();
                 }
