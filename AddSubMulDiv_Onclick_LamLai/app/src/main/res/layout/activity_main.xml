@@ -20,6 +20,7 @@
             android:textSize="18dp"
             android:textColor="#5F0FED"/>
         <EditText
+            android:id="@+id/edtSo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mời nhập 1 con số ở đây"/>
@@ -37,6 +38,7 @@
             android:textSize="18dp"
             android:textColor="#5F0FED"/>
         <EditText
+            android:id="@+id/edtSo2"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,21 +51,25 @@
         android:padding="5dp"
         android:gravity="center_horizontal">
         <Button
+            android:id="@+id/btnCong"
             android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"/>
         <Button
+            android:id="@+id/btnTru"
             android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"/>
         <Button
+            android:id="@+id/btnNhan"
             android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"/>
         <Button
+            android:id="@+id/btnChia"
             android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,9 +88,11 @@
             android:textSize="18dp"
             android:textColor="#5F0FED"/>
         <EditText
+            android:id="@+id/edtKQ"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mời nhập 1 con số ở đây"/>
+            android:hint="Nơi hiện kết quả"
+            android:enabled="false"/>
     </LinearLayout>
 </LinearLayout>
