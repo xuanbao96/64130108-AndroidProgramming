@@ -64,15 +64,39 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     void XuLy_Cong(){
-
+        String so1 = editTextSo1.getText().toString();
+        String so2 = editTextSo2.getText().toString();
+        float num1 = Float.parseFloat(so1);
+        float num2 = Float.parseFloat(so2);
+        float tong = num1 + num2;
+        String chuoiKQ = String.valueOf(tong);
+        editTextKQ.setText(chuoiKQ);
     }
     void XuLy_Tru(){
-
+        String so1 = editTextSo1.getText().toString();
+        String so2 = editTextSo2.getText().toString();
+        float num1 = Float.parseFloat(so1);
+        float num2 = Float.parseFloat(so2);
+        float hieu = num1 - num2;
+        String chuoiKQ = String.valueOf(hieu);
+        editTextKQ.setText(chuoiKQ);
     }
     void XuLy_Nhan(){
-
+        String so1 = editTextSo1.getText().toString();
+        String so2 = editTextSo2.getText().toString();
+        float num1 = Float.parseFloat(so1);
+        float num2 = Float.parseFloat(so2);
+        float tich = num1 * num2;
+        String chuoiKQ = String.valueOf(tich);
+        editTextKQ.setText(chuoiKQ);
     }
     void XuLy_Chia(){
-
+        String so1 = editTextSo1.getText().toString();
+        String so2 = editTextSo2.getText().toString();
+        float num1 = Float.parseFloat(so1);
+        float num2 = Float.parseFloat(so2);
+        float thuong = num1 / num2;
+        String chuoiKQ = String.valueOf(thuong);
+        editTextKQ.setText(chuoiKQ);
     }
 }
