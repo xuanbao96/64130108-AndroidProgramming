@@ -9,7 +9,8 @@
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,5 +21,13 @@
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:paddingBottom="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#899E9898"
+            android:drawableEnd="@drawable/icons8_magnifying_glass_24"
+            android:hint="Tìm kiếm..." />
+
     </LinearLayout>
 </ScrollView>
