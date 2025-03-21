@@ -436,3 +436,5 @@ Thêm button login và gợi ý đã có tải khoản chưa nếu chưa thì b�
         android:textColor="@color/purple"
         android:layout_marginBottom="20dp"/>
 </LinearLayout>
+
+Tạo activityhome làm giao diện trang chủ
