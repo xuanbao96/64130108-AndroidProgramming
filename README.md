@@ -832,3 +832,194 @@ Gán các thành phần cho painting
         android:background="@drawable/paint_brush"/>
 </FrameLayout>
 
+Gán các thành phần cho Crossword_Puzzle
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvGoodMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,  Good  Morning"
+            android:layout_marginStart="20dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#899E9898"
+            android:drawableEnd="@drawable/icons8_magnifying_glass_24"
+            android:hint="Tìm kiếm..." />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imMath"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red_math"/>
+    <TextView
+        android:id="@+id/tvMath"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Maths"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/tvMath1"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="40 topics"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/imComputer"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/computer"/>
+
+    <ImageView
+        android:id="@+id/imScience"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/purple_science"/>
+    <TextView
+        android:id="@+id/tvScience"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Science"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/tvScience1"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="45 topics"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/imGlobe"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/globe"/>
+
+    <ImageView
+        android:id="@+id/imMusic"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_music"/>
+    <TextView
+        android:id="@+id/tvMusic"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="320dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Music"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/tvMusic1"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="360dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="30 videos"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/imMusicalNote"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="390dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/musical_note"/>
+
+    <ImageView
+        android:id="@+id/imPainting"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_painting"/>
+    <TextView
+        android:id="@+id/tvPainting"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="320dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Science"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/tvPainting1"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="360dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="45 topics"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/imPaintBrush"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="390dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/paint_brush"/>
+
+    <ImageView
+        android:id="@+id/imCrossWord"
+        android:layout_marginTop="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/crossword_puzzle"/>
+    <TextView
+        android:id="@+id/tvCrossWord"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="520dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="CROSSWORD PUZZLE"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/imPaintBrush"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="530dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wrench"/>
+
+</FrameLayout>
+

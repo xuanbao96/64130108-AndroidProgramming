@@ -162,4 +162,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/paint_brush"/>
+
+    <ImageView
+        android:id="@+id/imCrossWord"
+        android:layout_marginTop="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/crossword_puzzle"/>
+    <TextView
+        android:id="@+id/tvCrossWord"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="520dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="CROSSWORD PUZZLE"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/imPaintBrush"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="530dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wrench"/>
+
 </FrameLayout>
