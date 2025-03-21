@@ -143,3 +143,78 @@ Thêm màu tím vào tệp color.xml
         android:layout_marginTop="190dp" />
     
 </LinearLayout>
+
+Thêm các image còn lại vào giao diện main, sửa nút, thay linearlayout thành framelayout, và căn chỉnh text view
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ptEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_egg" />
+
+    <ImageView
+        android:id="@+id/ptlightBulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:background="@drawable/custom_light_bulb"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KIDS CORNER"
+        android:fontFamily="@font/abril_fatface"
+        android:textSize="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:gravity="center"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="150dp"/>
+
+    <ImageView
+        android:id="@+id/ptBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_board"
+        android:layout_marginTop="200dp"/>
+
+    <ImageView
+        android:id="@+id/ptSmile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_smiley_face"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="60dp"/>
+
+    <ImageView
+        android:id="@+id/ptTriangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_triangle"
+        android:layout_marginTop="480dp"
+        android:layout_marginStart="240dp"/>
+
+    <ImageView
+        android:id="@+id/ptEgg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_egg2"
+        android:layout_marginTop="600dp"/>
+
+</FrameLayout>
