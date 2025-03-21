@@ -218,3 +218,5 @@ Thêm các image còn lại vào giao diện main, sửa nút, thay linearlayout
         android:layout_marginTop="600dp"/>
 
 </FrameLayout>
+
+Thêm activity cho đăng nhập
