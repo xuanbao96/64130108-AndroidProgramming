@@ -89,3 +89,20 @@ Gán code hình mặt cười từ figma vào dự án
         android:strokeLineJoin="round"
         android:pathData="M34 4c-1.77 0-3.46 0.7-4.71 1.95s-1.96 2.95-1.96 4.72c0 1.76 0.7 3.46 1.96 4.71 1.25 1.25 2.94 1.95 4.71 1.95m-10 10h0.03H24Zm20 0h0.03H44ZM25.67 44c1.08 1.1 2.38 1.99 3.81 2.6 1.43 0.6 2.97 0.9 4.52 0.9 1.55 0 3.09-0.3 4.52-0.9 1.43-0.61 2.73-1.5 3.81-2.6H25.67Z"/>
 </vector>
+
+Gán code bo góc vào dự án
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="3dp"
+        android:color="@color/purple"/>
+    <corners
+        android:radius="20dp"/>
+</shape>
+--------------------
+<Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"/>
