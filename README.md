@@ -106,3 +106,6 @@ Gán code bo góc vào dự án
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đăng nhập"/>
+
+Thêm màu tím vào tệp color.xml
+ <color name="purple">#8692f7</color>
