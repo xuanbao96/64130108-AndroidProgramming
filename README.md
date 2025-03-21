@@ -46,3 +46,15 @@ Gán code hình bóng đèn từ figma vào dự án
             android:pathData="M20.23 61.53C33.12 74.4 45.62 82.8 48.16 80.27c2.54-2.54-5.85-15.05-18.74-27.94C16.53 39.45 4.02 31.06 1.49 33.6c-2.54 2.53 5.85 15.04 18.74 27.93Z"/>
     </group>
 </vector>
+
+Gán code hình tấm bảng từ figma vào dự án
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="182dp"
+    android:height="185dp"
+    android:viewportWidth="182"
+    android:viewportHeight="185">
+    <path
+        android:fillColor="#FFE4C9F9"
+        android:fillType="evenOdd"
+        android:pathData="M15.56 185h35l14.21-34.2-29.99-9.3L15.56 185Zm101.67-34.2l14.21 34.2h35l-19.22-43.5-30 9.3Zm54.66-132.3h-65.72L101.1 0H80.9l-5.06 18.5H10.11c-2.68 0-5.25 0.97-7.15 2.7C1.06 22.95 0 25.3 0 27.76V129.5c0 2.45 1.07 4.8 2.96 6.54 1.9 1.74 4.47 2.71 7.15 2.71H171.9c2.68 0 5.25-0.97 7.15-2.7 1.9-1.74 2.96-4.1 2.96-6.55V27.75c0-2.45-1.06-4.8-2.96-6.54-1.9-1.74-4.47-2.71-7.15-2.71Z"/>
+</vector>
