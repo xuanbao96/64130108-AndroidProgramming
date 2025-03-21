@@ -29,5 +29,15 @@
             android:drawableEnd="@drawable/icons8_magnifying_glass_24"
             android:hint="Tìm kiếm..." />
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+           >
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

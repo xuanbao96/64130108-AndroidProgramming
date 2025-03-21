@@ -500,3 +500,4 @@ Thêm ô tìm kiếm
     </LinearLayout>
 </ScrollView>
 
+Thêm các icon bên figma vào android
