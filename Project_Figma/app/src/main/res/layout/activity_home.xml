@@ -179,11 +179,59 @@
         android:text="CROSSWORD PUZZLE"
         android:textSize="30dp"/>
     <ImageView
-        android:id="@+id/imPaintBrush"
+        android:id="@+id/imWrench"
         android:layout_marginStart="360dp"
         android:layout_marginTop="530dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/wrench"/>
+
+    <ImageView
+        android:id="@+id/imEssay"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="620dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/essay"/>
+    <TextView
+        android:id="@+id/tvEssay"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="640dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Essay"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/imEssay1"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="640dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pencil"/>
+
+    <ImageView
+        android:id="@+id/imRhymes"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="620dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rhymes"/>
+    <TextView
+        android:id="@+id/tvRhymes"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="640dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Rhymes"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/imRhymes1"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="640dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/music"/>
 
 </FrameLayout>
