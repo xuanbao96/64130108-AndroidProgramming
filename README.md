@@ -109,3 +109,37 @@ Gán code bo góc vào dự án
 
 Thêm màu tím vào tệp color.xml
  <color name="purple">#8692f7</color>
+
+Đưa 2 hình oval vào giao diện main và đưa nút đăng nhập ra giữa màn hình
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/pt_egg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_egg"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="200dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_egg2"
+        android:layout_marginTop="190dp" />
+    
+</LinearLayout>
