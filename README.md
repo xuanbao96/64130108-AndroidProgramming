@@ -1383,3 +1383,9 @@ public class HomeActivity extends AppCompatActivity {
 }
 
 Tạo dự án list từ điển
+Thêm list view vào giao diện
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvTuDien"/>
+
