@@ -1389,3 +1389,25 @@ Thêm list view vào giao diện
         android:layout_height="wrap_content"
         android:id="@+id/lvTuDien"/>
 
+Thêm edittext vào giao diện và chỉnh bố cục dọc cho linearlayout(vertical)
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:text="DANH SÁCH CÁC LOẠI TỪ ĐIỂN"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvTuDien"/>
+
+</LinearLayout>
