@@ -1,6 +1,7 @@
 package xuanbao.edu.listtudien;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         nguonDL.add("Tiếng Pháp");
 
         ListView listViewNN = (ListView) findViewById(R.id.lvTuDien);
+
+        ArrayAdapter<String> NgonNguAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,nguonDL);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
