@@ -1,8 +1,11 @@
 package xuanbao.edu.listtudien;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> NgonNguAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,nguonDL);
         listViewNN.setAdapter(NgonNguAdapter);
+
+        listViewNN.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String value = NgonNguAdapter.getItem(position);
+                Toast.makeText(MainActivity.this,value,Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
