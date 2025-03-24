@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listViewNN = (ListView) findViewById(R.id.lvTuDien);
 
         ArrayAdapter<String> NgonNguAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,nguonDL);
+        listViewNN.setAdapter(NgonNguAdapter);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
