@@ -1,6 +1,7 @@
 package xuanbao.edu.listtudien;
 
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         nguonDL.add("Tiếng Nhật");
         nguonDL.add("Tiếng Nga");
         nguonDL.add("Tiếng Pháp");
+
+        ListView listViewNN = (ListView) findViewById(R.id.lvTuDien);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
