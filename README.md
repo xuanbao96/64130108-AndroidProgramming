@@ -1695,3 +1695,5 @@ Thiết lập 4 nút để chuyển màn hình cho main
             android:layout_margin="8dp"/>
     </GridLayout>
 </LinearLayout>
+
+Tạo dự án mới recycleview
