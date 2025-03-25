@@ -1628,3 +1628,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+Tạo dự án mới (background)
+Tạo nen_chuyen-tiep trong drawable
