@@ -1,5 +1,6 @@
 package xuanbao.edu.recycleview;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -8,7 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
+    Context context;
+    ArrayList<LandScape> lstData;
+
+    public LandScapeAdapter(Context context, ArrayList<LandScape> lstData) {
+        this.context = context;
+        this.lstData = lstData;
+    }
 
     @NonNull
     @Override
