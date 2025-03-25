@@ -1807,3 +1807,5 @@ Gán độ rộng, độ cao và id cho textview và chỉnh sửa độ rộng,
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+Thêm lớp java (LandScapeAdapter) cho việc tạo adapter
