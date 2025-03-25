@@ -33,7 +33,17 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
 
     @Override
     public void onBindViewHolder(@NonNull ItemLandHolder holder, int position) {
-
+        // Lấy đối tượng hiển thị
+        LandScape landScapeHienThi = lstData.get(position);
+        // Trích thông tin
+        String caption = landScapeHienThi.getLandCaption();
+        String tenAnh = landScapeHienThi.getLandImageFileName();
+        // Đặt vào các truòng thông tin của holder
+        holder.tvCaption.setText(caption);
+        // Đặt ảnh
+        String packageName = holder.itemView.getContext().getPackageName();
+        int imageID = holder.itemView.getResources().getIdentifier(tenAnh,"mipmap",packageName);
+        holder.ivLandScape.setImageResource(imageID);
     }
 
     @Override
