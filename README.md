@@ -1726,3 +1726,4 @@ public class LandScape {
         this.landCaption = landCaption;
     }
 }
+Tạo layout để thiết kế 
