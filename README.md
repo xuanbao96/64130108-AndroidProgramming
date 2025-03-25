@@ -1697,3 +1697,4 @@ Thiết lập 4 nút để chuyển màn hình cho main
 </LinearLayout>
 
 Tạo dự án mới recycleview
+Tải thêm Java class (LandScape)
