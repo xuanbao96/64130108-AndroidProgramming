@@ -1,6 +1,7 @@
 package xuanbao.edu.recycleview;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
     Context context;
@@ -23,7 +25,10 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
     @NonNull
     @Override
     public ItemLandHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater cai_bom = LayoutInflater.from(context);
+        View vItem = cai_bom.inflate(R.layout.item_land, parent, false);
+        ItemLandHolder viewholderCreated = new ItemLandHolder(vItem);
+        return viewholderCreated;
     }
 
     @Override
