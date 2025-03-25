@@ -1631,3 +1631,15 @@ public class MainActivity extends AppCompatActivity {
 
 Tạo dự án mới (background)
 Tạo nen_chuyen-tiep trong drawable
+Dùng thẻ gradiant tạo hiệu ứng chuyển tiếp màu
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="90"
+        android:centerColor="#8813F631"
+        android:endColor="#b5b6d2"
+        android:startColor="#0DFD16"
+        android:type="linear"/>
+</shape>
+
+Tạo mới dự án ôn tập giữa kỳ
