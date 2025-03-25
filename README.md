@@ -1698,3 +1698,31 @@ Thiết lập 4 nút để chuyển màn hình cho main
 
 Tạo dự án mới recycleview
 Tải thêm Java class (LandScape)
+Khai báo 2 biến cho image và caption, thiết lập getter và setter và hàm khởi tạo (constructor) cho chúng
+package xuanbao.edu.recycleview;
+
+public class LandScape {
+    String landImageFileName;
+    String landCaption;
+
+    public LandScape(String landImageFileName, String landCaption) {
+        this.landImageFileName = landImageFileName;
+        this.landCaption = landCaption;
+    }
+
+    public String getLandImageFileName() {
+        return landImageFileName;
+    }
+
+    public void setLandImageFileName(String landImageFileName) {
+        this.landImageFileName = landImageFileName;
+    }
+
+    public String getLandCaption() {
+        return landCaption;
+    }
+
+    public void setLandCaption(String landCaption) {
+        this.landCaption = landCaption;
+    }
+}
