@@ -1643,3 +1643,55 @@ Dùng thẻ gradiant tạo hiệu ứng chuyển tiếp màu
 </shape>
 
 Tạo mới dự án ôn tập giữa kỳ
+Thiết lập 4 nút để chuyển màn hình cho main
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Câu 1"
+            android:background="#FFFF00"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Câu 2"
+            android:background="#FFFF00"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Câu 3"
+            android:background="#FFFF00"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Câu 4"
+            android:background="#FFFF00"
+            android:layout_margin="8dp"/>
+    </GridLayout>
+</LinearLayout>
