@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    @Overridevb
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> NgonNguAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,nguonDL);
         listViewNN.setAdapter(NgonNguAdapter);
 
-        listViewNN.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listViewNN.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String value = NgonNguAdapter.getItem(position);
