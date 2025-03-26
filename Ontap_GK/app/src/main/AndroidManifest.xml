@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Ontap_GK"
         tools:targetApi="31">
         <activity
+            android:name=".activityCau4"
+            android:exported="false" />
+        <activity
             android:name=".activityCau3"
             android:exported="false" />
         <activity
