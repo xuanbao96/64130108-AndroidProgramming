@@ -2063,7 +2063,56 @@ Thiết lập activityCau4.xml
         android:textSize="18dp"
         android:textColor="@android:color/white"/>
 </LinearLayout>
+chuyển màn hình đầu tiên tới các màn hình còn lại
+package xuanbao.edu.ontap_gk;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        Button btnCau1 = findViewById(R.id.btn1);
+        Button btnCau2 = findViewById(R.id.btn2);
+        Button btnCau3 = findViewById(R.id.btn3);
+        Button btnCau4 = findViewById(R.id.btn4);
+        btnCau1.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, activityCau1.class);
+            startActivity(intent);
+        });
+
+        btnCau2.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, activityCau2.class);
+            startActivity(intent);
+        });
+
+        btnCau3.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, activityCau3.class);
+            startActivity(intent);
+        });
+
+        btnCau4.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, activityCau4.class);
+            startActivity(intent);
+        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+}
 
 
 Tạo dự án mới recycleview
