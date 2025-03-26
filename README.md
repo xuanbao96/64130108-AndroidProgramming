@@ -1812,6 +1812,7 @@ Thiết lập xml cho activityCau2
         android:id="@+id/lvIndexLanguage">
     </ListView>
 </LinearLayout>
+Tạo activityCau3
 
 
 Tạo dự án mới recycleview
