@@ -1696,6 +1696,9 @@ Thiết lập 4 nút để chuyển màn hình cho main
     </GridLayout>
 </LinearLayout>
 
+Tạo activityCau1
+
+
 Tạo dự án mới recycleview
 Tải thêm Java class (LandScape)
 Khai báo 2 biến cho image và caption, thiết lập getter và setter và hàm khởi tạo (constructor) cho chúng
