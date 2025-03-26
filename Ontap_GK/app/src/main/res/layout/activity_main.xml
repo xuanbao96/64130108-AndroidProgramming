@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/blue"
     tools:context=".MainActivity">
 
     <GridLayout
@@ -21,7 +22,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Câu 1"
-            android:background="#FFFF00"
+            android:background="@color/yellow"
             android:layout_margin="8dp"/>
 
         <Button
@@ -29,7 +30,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Câu 2"
-            android:background="#FFFF00"
+            android:background="@color/yellow"
             android:layout_margin="8dp"/>
 
         <Button
@@ -37,7 +38,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Câu 3"
-            android:background="#FFFF00"
+            android:background="@color/yellow"
             android:layout_margin="8dp"/>
 
         <Button
@@ -45,7 +46,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Câu 4"
-            android:background="#FFFF00"
+            android:background="@color/yellow"
             android:layout_margin="8dp"/>
     </GridLayout>
 </LinearLayout>
