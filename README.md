@@ -1788,6 +1788,7 @@ Thiết lập xml cho activityCau1
             android:inputType="number" />
     </LinearLayout>
 </LinearLayout>
+Tạo activityCau2
 
 
 Tạo dự án mới recycleview
