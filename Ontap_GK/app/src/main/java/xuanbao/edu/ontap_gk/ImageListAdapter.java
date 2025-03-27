@@ -1,6 +1,7 @@
 package xuanbao.edu.ontap_gk;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,12 @@ public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.Item
         String packageName = holder.itemView.getContext().getPackageName();
         int imgID = holder.itemView.getResources().getIdentifier(picture,"mipmap",packageName);
         holder.ivImageList.setImageResource(imgID);
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, activityCau4.class);
+            intent.putExtra("CAPTION", cption);
+            intent.putExtra("IMAGE", picture);
+            context.startActivity(intent);
+        });
     }
 
     @Override
