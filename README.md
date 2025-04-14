@@ -2756,4 +2756,6 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-Tạo dự án mới cho Fragment_Static
+-Tạo dự án mới cho Fragment_Static
+-Tạo ContentFragment từ FragmentBlank
+
