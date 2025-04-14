@@ -2757,7 +2757,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 -Tạo dự án mới cho Fragment_Static
--Tạo ContentFragment từ FragmentBlank
+-Tạo ContentFragment từ Fragment(Blank)
 -Chỉnh sửa và thêm 1 số thông số và thuộc tính cho fragment_content.xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -2782,4 +2782,6 @@ public class MainActivity extends AppCompatActivity {
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+-Tạo FooterFragment từ Fragment(Blank)
+
 
