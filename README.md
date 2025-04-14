@@ -2877,3 +2877,5 @@ public class MainActivity extends AppCompatActivity {
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+-Tạo dự án mới Fragment_Dynamic
+
