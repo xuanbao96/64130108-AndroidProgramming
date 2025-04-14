@@ -2876,6 +2876,8 @@ public class MainActivity extends AppCompatActivity {
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+![image](https://github.com/user-attachments/assets/487afe15-bf01-431a-b295-d13abc26ecb5)
+
 
 -Tạo dự án mới Fragment_Dynamic
 
