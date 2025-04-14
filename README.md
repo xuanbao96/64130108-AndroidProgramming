@@ -2756,4 +2756,4 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-
+Tạo dự án mới cho Fragment_Static
