@@ -2881,4 +2881,5 @@ public class MainActivity extends AppCompatActivity {
 
 -Tạo dự án mới Fragment_Dynamic
 -Tạo 2 fragment content với footer
+-Sử dụng lại mã content với footer .xml bên static vào bài này
 
