@@ -2950,3 +2950,4 @@ public class MainActivity extends AppCompatActivity {
 }
 
 -Tạo mới dự án Fragment_Replace
+-Tạo mới ContentFragment và FooterFragment sử dụng phần layout của bài dynamic  gán vào
