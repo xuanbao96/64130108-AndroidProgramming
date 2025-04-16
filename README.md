@@ -2948,3 +2948,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+-Tạo mới dự án Fragment_Replace
