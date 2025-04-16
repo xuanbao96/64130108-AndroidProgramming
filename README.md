@@ -2951,3 +2951,37 @@ public class MainActivity extends AppCompatActivity {
 
 -Tạo mới dự án Fragment_Replace
 -Tạo mới ContentFragment và FooterFragment sử dụng phần layout của bài dynamic  gán vào
+-Chỉnh sửa main gán 2 fragment vào bằng FragmentContainerView và thiết lập chỉnh sửa thông số
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Content"
+        android:name="xuanbao.edu.fragment_replace.ContentFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="#DEB4B4"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView_Footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Footer"
+        android:name="xuanbao.edu.fragment_replace.FooterFragment"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#E42B2B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
