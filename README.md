@@ -2985,3 +2985,4 @@ public class MainActivity extends AppCompatActivity {
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+-Tạo 3 fragment 1,2,3
