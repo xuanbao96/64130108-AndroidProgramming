@@ -3124,3 +3124,4 @@ public class FooterFragment extends Fragment {
 }
 
 -Tạo dự án mới Navigation_bar
+-Tạo bottom_menu.xml từ res
