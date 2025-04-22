@@ -3125,3 +3125,21 @@ public class FooterFragment extends Fragment {
 
 -Tạo dự án mới Navigation_bar
 -Tạo bottom_menu.xml từ res
+-Gán 3 cái menuItem và thêm id và icon, tên
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="HOME" />
+    <item
+        android:id="@+id/mnu_search"
+        android:icon="@drawable/ic_search"
+        android:title="SEARCH" />
+    <item
+        android:id="@+id/mnu_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="PROFILE" />
+</menu>
