@@ -3143,3 +3143,4 @@ public class FooterFragment extends Fragment {
         android:icon="@drawable/ic_profile"
         android:title="PROFILE" />
 </menu>
+-Tạo 3 cái fragment (home,search,profile)
