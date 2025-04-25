@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:textColor="#2AD5EB"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Đăng ký"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:drawableLeft="@drawable/ic_login"
+        android:id="@+id/taikhoandk"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center"
+        android:hint="Tài Khoản đăng ký"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content">
+    </EditText>
+    <EditText
+        android:drawableLeft="@drawable/ic_password__1_"
+        android:id="@+id/matkhaudk"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="Mật khẩu đăng ký"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content">
+    </EditText>
+    <EditText
+        android:drawableLeft="@drawable/ic_email"
+        android:id="@+id/emaildk"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="Email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content">
+    </EditText>
+    <Button
+        android:id="@+id/btndangkydk"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Đăng ký"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/btndangnhapdk"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Quay về đăng nhập"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+</LinearLayout>

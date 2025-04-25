@@ -3219,3 +3219,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+-Đã thiết kế, đăng nhập, đăng ký, và chạy ảnh ngang quảng cáo
