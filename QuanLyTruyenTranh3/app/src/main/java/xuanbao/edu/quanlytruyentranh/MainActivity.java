@@ -1,11 +1,20 @@
 package xuanbao.edu.quanlytruyentranh;
 
+
+import xuanbao.edu.quanlytruyentranh.R;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import android.widget.ViewFlipper;
 
@@ -13,6 +22,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -41,7 +51,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AnhXa();
+        ActionBar();
         ActionViewFlipper();
+    }
+
+    //thanh actionbar với toolbar
+    private void ActionBar() {
+        //hàm hỗ trợ toolbar
+        setSupportActionBar(toolbar);
+
+        //thiết lập nút cho actionbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //tạo icon cho toolbar
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
     }
 
     //phương thức cho chạy quảng cáo với ViewFlipper
@@ -85,5 +114,26 @@ public class MainActivity extends AppCompatActivity {
         listViewThongTin = findViewById(R.id.lvthongtin);
         navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawerlayout);
+    }
+
+    //nạp 1 menu tìm kiếm vào Actionbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        //nếu click vào icon tìm kiếm sẽ chuyển sang màn hình tìm kiếm
+        if (item.getItemId() == R.id.menu1) {
+            Toast.makeText(this, "Bạn đã bấm tìm kiếm!", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, ManTimKiem.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
