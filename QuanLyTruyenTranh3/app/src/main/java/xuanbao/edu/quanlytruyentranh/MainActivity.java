@@ -2,14 +2,24 @@ package xuanbao.edu.quanlytruyentranh;
 
 
 import xuanbao.edu.quanlytruyentranh.R;
+import xuanbao.edu.quanlytruyentranh.adapter.adapterTruyen;
+import xuanbao.edu.quanlytruyentranh.adapter.adapterchuyenmuc;
+import xuanbao.edu.quanlytruyentranh.adapter.adapterthongtin;
+import xuanbao.edu.quanlytruyentranh.database.databasedoctruyen;
+import xuanbao.edu.quanlytruyentranh.database.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.database.model.Truyen;
+import xuanbao.edu.quanlytruyentranh.database.model.chuyenmuc;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -44,15 +54,76 @@ public class MainActivity extends AppCompatActivity {
     ListView listView, listViewNew, listViewThongTin;
     DrawerLayout drawerLayout;
 
+    String email;
+    String tentaikhoan;
+
+    ArrayList<Truyen> TruyenArraylist;
+
+    adapterTruyen adapterTruyen;
+
+    ArrayList<chuyenmuc> chuyenmucArrayList;
+
+    ArrayList<TaiKhoan> taiKhoanArrayList;
+
+    databasedoctruyen databasedoctruyen;
+
+    adapterchuyenmuc adapterchuyenmuc;
+    adapterthongtin adapterthongtin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        databasedoctruyen = new databasedoctruyen(this);
+
+        //nhận dữ liệu ở màn đăng nhập gửi
+        Intent intentpq = getIntent();
+        int i = intentpq.getIntExtra("phanquyen",0);
+        int id = intentpq.getIntExtra("id",0);
+        email = intentpq.getStringExtra("email");
+        tentaikhoan = intentpq.getStringExtra("tentaikhoan");
+
         AnhXa();
         ActionBar();
         ActionViewFlipper();
+
+        //bắt sk click item
+        listViewNew.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, ManNoiDung.class);
+
+                String tent = TruyenArraylist.get(position).getTenTruyen();
+                String noidung = TruyenArraylist.get(position).getNoiDung();
+                intent.putExtra("tentruyen", tent);
+                intent.putExtra("noidung", noidung);
+                startActivity(intent);
+            }
+        });
+
+        //bắt click item cho listview
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0){
+                    if (i == 2){
+
+                    }
+                    else{
+                        Toast.makeText(MainActivity.this, "Bạn không có quyền đăng bài", Toast.LENGTH_SHORT).show();
+                        Log.e("Đăng bài : ", "Bạn không có quyền");
+                    }
+                }
+                else if (position == 1){
+
+                }
+                else if (position == 2){
+                    finish();
+                }
+            }
+        });
     }
 
     //thanh actionbar với toolbar
@@ -114,6 +185,41 @@ public class MainActivity extends AppCompatActivity {
         listViewThongTin = findViewById(R.id.lvthongtin);
         navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawerlayout);
+
+        TruyenArraylist = new ArrayList<>();
+
+        Cursor cursor1 = databasedoctruyen.getData1();
+        while (cursor1.moveToNext()){
+
+            int id = cursor1.getInt(0);
+            String tentruyen = cursor1.getString(1);
+            String noidung = cursor1.getString(2);
+            String anh = cursor1.getString(3);
+            int id_tk = cursor1.getInt(4);
+
+            TruyenArraylist.add(new Truyen(id, tentruyen, noidung, anh, id_tk));
+
+            adapterTruyen = new adapterTruyen(getApplicationContext(), TruyenArraylist);
+            listViewNew.setAdapter(adapterTruyen);
+        }
+        cursor1.moveToFirst();
+        cursor1.close();
+
+        //thông tin
+        taiKhoanArrayList = new ArrayList<>();
+        taiKhoanArrayList.add(new TaiKhoan(tentaikhoan, email));
+
+        adapterthongtin = new adapterthongtin(this, R.layout.navigation_thongtin, taiKhoanArrayList);
+        listViewThongTin.setAdapter(adapterthongtin);
+
+        //chuyên mục
+        chuyenmucArrayList = new ArrayList<>();
+        chuyenmucArrayList.add(new chuyenmuc("Đăng bài",R.drawable.ic_post_add));
+        chuyenmucArrayList.add(new chuyenmuc("Thông tin",R.drawable.ic_face));
+        chuyenmucArrayList.add(new chuyenmuc("Đăng xuất",R.drawable.ic_logout));
+
+        adapterchuyenmuc = new adapterchuyenmuc(this, R.layout.chuyenmuc, chuyenmucArrayList);
+        listView.setAdapter(adapterchuyenmuc);
     }
 
     //nạp 1 menu tìm kiếm vào Actionbar
