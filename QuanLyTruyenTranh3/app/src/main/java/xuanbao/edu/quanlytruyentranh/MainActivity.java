@@ -1,14 +1,13 @@
 package xuanbao.edu.quanlytruyentranh;
 
 
-import xuanbao.edu.quanlytruyentranh.R;
 import xuanbao.edu.quanlytruyentranh.adapter.adapterTruyen;
 import xuanbao.edu.quanlytruyentranh.adapter.adapterchuyenmuc;
 import xuanbao.edu.quanlytruyentranh.adapter.adapterthongtin;
 import xuanbao.edu.quanlytruyentranh.database.databasedoctruyen;
-import xuanbao.edu.quanlytruyentranh.database.model.TaiKhoan;
-import xuanbao.edu.quanlytruyentranh.database.model.Truyen;
-import xuanbao.edu.quanlytruyentranh.database.model.chuyenmuc;
+import xuanbao.edu.quanlytruyentranh.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.model.Truyen;
+import xuanbao.edu.quanlytruyentranh.model.chuyenmuc;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -24,26 +23,16 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import android.widget.ViewFlipper;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -107,18 +96,23 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //đăng bài
                 if (position == 0){
                     if (i == 2){
-
+                        Intent intent = new Intent(MainActivity.this, ManAdmin.class);
+                        startActivity(intent);
                     }
                     else{
                         Toast.makeText(MainActivity.this, "Bạn không có quyền đăng bài", Toast.LENGTH_SHORT).show();
                         Log.e("Đăng bài : ", "Bạn không có quyền");
                     }
                 }
+                //nếu vị trí ấn vào là thông tin thì sẽ chuyển qua ứng dụng màn thông tin
                 else if (position == 1){
-
+                    Intent intent =  new Intent(MainActivity.this, ManThongTin.class);
+                    startActivity(intent);
                 }
+                //đăng xuất
                 else if (position == 2){
                     finish();
                 }

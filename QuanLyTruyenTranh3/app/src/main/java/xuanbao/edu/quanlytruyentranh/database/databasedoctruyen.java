@@ -9,7 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import xuanbao.edu.quanlytruyentranh.database.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.model.TaiKhoan;
 
 public class databasedoctruyen extends SQLiteOpenHelper {
     //csdl
@@ -256,11 +256,19 @@ public class databasedoctruyen extends SQLiteOpenHelper {
     }
 
     //lấy 3 truyện mới nhất
-    public Cursor getData1(){
+    public Cursor getData1() {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor res = db.rawQuery("SELECT * FROM "+TABLE_TRUYEN+" ORDER BY "+ID_TRUYEN+" DESC LIMIT 3", null);
 
+        return res;
+    }
+
+    //lấy tất cả truyện
+    public Cursor getData2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor res = db.rawQuery("SELECT * FROM "+TABLE_TRUYEN, null);
         return res;
     }
 }

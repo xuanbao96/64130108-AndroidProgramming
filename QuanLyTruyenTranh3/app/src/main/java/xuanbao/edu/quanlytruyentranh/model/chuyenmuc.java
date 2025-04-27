@@ -1,4 +1,4 @@
-package xuanbao.edu.quanlytruyentranh.database.model;
+package xuanbao.edu.quanlytruyentranh.model;
 
 public class chuyenmuc {
 

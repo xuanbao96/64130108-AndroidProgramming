@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import xuanbao.edu.quanlytruyentranh.R;
-import xuanbao.edu.quanlytruyentranh.database.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.model.TaiKhoan;
 
 public class adapterthongtin extends BaseAdapter {
 

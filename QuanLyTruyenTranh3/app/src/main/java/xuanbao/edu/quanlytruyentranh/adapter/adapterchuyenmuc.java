@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import xuanbao.edu.quanlytruyentranh.R;
-import xuanbao.edu.quanlytruyentranh.database.model.chuyenmuc;
+import xuanbao.edu.quanlytruyentranh.model.chuyenmuc;
 
 public class adapterchuyenmuc extends BaseAdapter {
 

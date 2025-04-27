@@ -9,12 +9,9 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import xuanbao.edu.quanlytruyentranh.database.databasedoctruyen;
-import xuanbao.edu.quanlytruyentranh.database.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.model.TaiKhoan;
 
 public class RegisterActivity extends AppCompatActivity {
 
