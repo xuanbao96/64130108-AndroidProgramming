@@ -46,6 +46,7 @@
                     android:layout_height="wrap_content"></TextView>
 
                 <ListView
+                    android:background="#21E1FA"
                     android:id="@+id/lvnew"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></ListView>

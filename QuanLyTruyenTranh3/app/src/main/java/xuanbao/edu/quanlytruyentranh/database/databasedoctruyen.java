@@ -10,6 +10,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import xuanbao.edu.quanlytruyentranh.model.TaiKhoan;
+import xuanbao.edu.quanlytruyentranh.model.Truyen;
 
 public class databasedoctruyen extends SQLiteOpenHelper {
     //csdl
@@ -269,6 +270,27 @@ public class databasedoctruyen extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor res = db.rawQuery("SELECT * FROM "+TABLE_TRUYEN, null);
+        return res;
+    }
+
+    //thêm truyện
+    public void AddTruyen(Truyen truyen) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(TEN_TRUYEN, truyen.getTenTruyen());
+        values.put(NOI_DUNG, truyen.getNoiDung());
+        values.put(IMAGE, truyen.getAnh());
+        values.put(ID_TAI_KHOAN, truyen.getID_TK());
+
+        db.insert(TABLE_TRUYEN, null, values);
+        db.close();
+    }
+
+    public int Delete(int i) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        int res = db.delete(TABLE_TRUYEN, ID_TRUYEN+" = "+i, null);
         return res;
     }
 }

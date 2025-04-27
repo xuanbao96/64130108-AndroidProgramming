@@ -9,13 +9,17 @@
     tools:context=".ManTimKiem">
 
     <EditText
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
         android:id="@+id/timkiem"
+        android:textColorHint="@color/black"
         android:hint="search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
     </EditText>
 
     <ListView
+        android:background="#41D6E9"
         android:id="@+id/listviewTimKiem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>

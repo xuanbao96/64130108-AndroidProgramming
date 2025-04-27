@@ -3,6 +3,8 @@ package xuanbao.edu.quanlytruyentranh;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -47,13 +49,49 @@ public class ManTimKiem extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ManTimKiem.this, ManNoiDung.class);
-                String tent = TruyenArrayList.get(position).getTenTruyen();
-                String noidungtr = TruyenArrayList.get(position).getNoiDung();
+                String tent = arrayList.get(position).getTenTruyen();
+                String noidungtr = arrayList.get(position).getNoiDung();
                 intent.putExtra("tentruyen", tent);
                 intent.putExtra("noidung", noidungtr);
                 startActivity(intent);
             }
         });
+
+        //editText search
+        edt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
+    }
+    //search
+    private void filter(String text) {
+        //xóa dữ liệu mảng
+        arrayList.clear();
+
+        ArrayList<Truyen> filteredList = new ArrayList<>();
+
+        for(Truyen item : TruyenArrayList) {
+            if(item.getTenTruyen().toLowerCase().contains(text.toLowerCase())) {
+                //thêm item vào filteredList
+                filteredList.add(item);
+
+                //thêm vào mảng
+                arrayList.add(item);
+            }
+        }
+        adapterTruyen.filterList(filteredList);
     }
 
     //phương thức lấy dữ liệu, gắn vào listview
@@ -74,6 +112,8 @@ public class ManTimKiem extends AppCompatActivity {
             int id_tk = cursor.getInt(4);
 
             TruyenArrayList.add(new Truyen(id, tentruyen, noidung, anh, id_tk));
+
+            arrayList.add(new Truyen(id, tentruyen, noidung, anh, id_tk));
 
             adapterTruyen = new adapterTruyen(getApplicationContext(), TruyenArrayList);
 
