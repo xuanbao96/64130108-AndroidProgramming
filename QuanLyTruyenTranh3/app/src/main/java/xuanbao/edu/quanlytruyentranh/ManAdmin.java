@@ -1,5 +1,6 @@
 package xuanbao.edu.quanlytruyentranh;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -62,6 +63,30 @@ public class ManAdmin extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
+                DialogDelete(position);
+
+                return false;
+            }
+        });
+    }
+
+    //phương thức Dialog hiển thị cửa sổ xóa
+    private void DialogDelete(int position) {
+
+        //tạo đối tượng dialog
+        Dialog dialog = new Dialog(this);
+        //nạp layout vào dialog
+        dialog.setContentView(R.layout.dialogdelete);
+        //tắt click ra ngoài là đóng, chỉ click no mới đóng
+        dialog.setCanceledOnTouchOutside(false);
+
+        //ánh xạ
+        Button btnYes = dialog.findViewById(R.id.buttonYes);
+        Button btnNo = dialog.findViewById(R.id.buttonNo);
+
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 int idtruyen = TruyenArrayList.get(position).getID();
 
                 //xóa dữ liệu
@@ -72,9 +97,17 @@ public class ManAdmin extends AppCompatActivity {
                 finish();
                 startActivity(intent);
                 Toast.makeText(ManAdmin.this, "Xóa truyện thành công", Toast.LENGTH_SHORT).show();
-                return false;
             }
         });
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //thực hiện đóng dialog
+                dialog.cancel();
+            }
+        });
+        //chạy dialog
+        dialog.show();
     }
 
     //gán dữ liệu cho listview

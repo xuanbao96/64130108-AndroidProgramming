@@ -3227,3 +3227,5 @@ public class MainActivity extends AppCompatActivity {
 -Đưa nội dung truyện và thông tin app, và xem nội dung truyện ở màn hình tìm kiếm
 
 -Tạo search trong trang tìm kiếm, thực hiện giao diện admin và đăng truyện, tạo trang admin và chức năng xóa, và đăng bài sử dụng sqllite
+
+-Tạo cửa sổ dialog để xác nhận xóa truyện
